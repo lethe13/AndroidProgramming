@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">COMP304-Assignment2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="st1">Stephen McKillop</string>
+    <string name="st2">Wendall Hsu</string>
+    <string name="st3">Jake Parnell</string>
+    <string name="st4">Nikita Chernykh</string>
+    <string name="st5">Robert Reimens</string>
+
+</resources>
