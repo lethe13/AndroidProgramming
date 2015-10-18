@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;COMP304-MicroProject1&apos; to &apos;COMP304-Group1-MicroProject1&apos;&#x0D;&#x0A;- Original element: &apos;COMP304-MicroProject1&apos;&#x0D;&#x0A;- Renamed element: &apos;COMP304-MicroProject1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;COMP304-MicroProject1&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=COMP304-MicroProject1" name="COMP304-Group1-MicroProject1" references="true" stamp="1445200341283" version="1.0"/>
+</session>

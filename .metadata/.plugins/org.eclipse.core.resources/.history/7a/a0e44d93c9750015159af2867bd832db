@@ -1,0 +1,15 @@
+package com.example.comp304_microproject1;
+
+import java.util.Random;
+
+public class GuessingGame {
+	
+	Random randomNum = new Random();
+	int num = randomNum.nextInt(100) + 1;
+	
+	int score = 100;
+	int chance = 10;
+	
+	
+
+}
