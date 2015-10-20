@@ -20,7 +20,7 @@
         android:id="@+id/lblScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Score: 100"
+        android:text="Score: 100%"
         android:layout_alignParentRight="true"
         android:textAppearance="?android:attr/textAppearanceMedium" />
      
@@ -61,12 +61,5 @@
        android:text=""
        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-   <TextView
-       android:id="@+id/textView2"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@+id/lblMessage"
-       android:text="wut"
-       android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

@@ -33,8 +33,8 @@ public class GuessingGame extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_guessing_game);
 		
-		TextView test = (TextView) findViewById(R.id.textView2);
-		test.setText("" + num);
+//		TextView test = (TextView) findViewById(R.id.textView2);
+//		test.setText("" + num);
 		
 		Button btnGo = (Button) findViewById(R.id.btnGo);
         btnGo.setOnClickListener(new View.OnClickListener() {
