@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -32,6 +33,22 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	public void songClick(View view)
+	{
+		mp.stop();
+		if (view.getId() == R.id.gummy)
+		{
+			mp = MediaPlayer.create(this,  R.raw.gummybear);
+		}
+		else if (view.getId() == R.id.letitgo)
+		{
+			mp = MediaPlayer.create(this,  R.raw.frozen_letitgo);
+		}
+		mp.start();
+		TextView tv = (TextView)findViewById(R.id.SongList);
+		tv.setText("Song Length: " + mp.getDuration() + "ms");
+	}
+	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
