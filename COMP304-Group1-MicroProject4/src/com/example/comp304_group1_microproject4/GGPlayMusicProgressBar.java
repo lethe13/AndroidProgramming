@@ -213,6 +213,7 @@ public class GGPlayMusicProgressBar extends Activity {
 
 		mp.setLooping(true);
 		mp.start();
+		btnPause.setText("Pause Song");
 		
 		new Thread(new Runnable() {
             public void run() {

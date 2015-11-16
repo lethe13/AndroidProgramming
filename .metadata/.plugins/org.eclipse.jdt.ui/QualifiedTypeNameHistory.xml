@@ -15,9 +15,7 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="android.content.Context"/>
 <fullyQualifiedTypeName name="com.example.comp304_microproject1.MainTestGuessingGame"/>
-<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="android.view.View"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.example.comp304_assignment4.R"/>
 <fullyQualifiedTypeName name="com.example.comp304_assignment4.R.id"/>
 <fullyQualifiedTypeName name="android.widget.RadioButton"/>
@@ -29,4 +27,7 @@
 <fullyQualifiedTypeName name="java.util.Timer"/>
 <fullyQualifiedTypeName name="android.widget.SeekBar"/>
 <fullyQualifiedTypeName name="com.example.comp304_group1_microproject3.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.example.comp304_group1_microproject4.GGPlayMusicProgressBar"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
 </qualifiedTypeNameHistroy>
