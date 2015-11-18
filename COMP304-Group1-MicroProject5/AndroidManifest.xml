@@ -25,7 +25,8 @@
         <activity
             android:name=".GraphicalGuessingGame"
             android:label="@string/title_activity_graphical_guessing_game"
-            android:parentActivityName=".MainGraphicalGuessingGame" >
+            android:parentActivityName=".MainGraphicalGuessingGame"
+            android:screenOrientation="landscape" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.comp304_group1_microproject5.MainGraphicalGuessingGame" />
