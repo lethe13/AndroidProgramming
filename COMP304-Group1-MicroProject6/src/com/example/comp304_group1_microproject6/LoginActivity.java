@@ -32,30 +32,35 @@ public class LoginActivity extends Activity {
 			public void onClick(View arg0) {
 				username = USERNAME.getText().toString();
 				userpass = USERPASS.getText().toString();
-				DatabaseOperations DOP = new DatabaseOperations(CTX);
-				Cursor CR = DOP.getInformayion(DOP);
-				CR.moveToFirst();
-				boolean login_status = false;
-				String NAME = "";
-				do {
-					if (username.equals(CR.getString(0))
-							&& (userpass.equals(CR.getString(1)))) {
-						login_status = true;
-						NAME = CR.getString(0);
-					}
-				} while (CR.moveToNext());
-				if (login_status) {
-					Toast.makeText(getBaseContext(), "Login Success",
-							Toast.LENGTH_LONG).show();
-					finish();
-					startActivity(new Intent(LoginActivity.this,
-							MainGraphicalGuessingGame.class));
+				if (username.equalsIgnoreCase("") || userpass.equalsIgnoreCase("")) {
+					Toast.makeText(getBaseContext(),
+							"Please enter a username and password.", Toast.LENGTH_LONG).show();
 				} else {
-					Toast.makeText(getBaseContext(), "Login Failed",
-							Toast.LENGTH_LONG).show();
-					finish();
+					DatabaseOperations DOP = new DatabaseOperations(CTX);
+					Cursor CR = DOP.getInformayion(DOP);
+					CR.moveToFirst();
+					boolean login_status = false;
+					String NAME = "";
+					do {
+						if (username.equals(CR.getString(0))
+								&& (userpass.equals(CR.getString(1)))) {
+							login_status = true;
+							NAME = CR.getString(0);
+						}
+					} while (CR.moveToNext());
+					if (login_status) {
+						Toast.makeText(getBaseContext(), "Login Success",
+								Toast.LENGTH_LONG).show();
+						finish();
+						startActivity(new Intent(LoginActivity.this,
+								MainGraphicalGuessingGame.class));
+					} else {
+						Toast.makeText(getBaseContext(), "Login Failed",
+								Toast.LENGTH_LONG).show();
+						finish();
+					}
 				}
-
+				
 			}
 		});
 	}

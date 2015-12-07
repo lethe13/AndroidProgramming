@@ -37,12 +37,14 @@ public class RegisterActivity extends Activity {
 
 				if (!(user_pass.equals(con_pass))) {
 					Toast.makeText(getBaseContext(),
-							"Passwords are not matching", Toast.LENGTH_LONG)
-							.show();
+							"Passwords are not matching", Toast.LENGTH_LONG).show();
 					USER_NAME.setText("");
 					USER_PASS.setText("");
 					CON_PASS.setText("");
 
+				} else if (user_name.equalsIgnoreCase("") || user_pass.equalsIgnoreCase("")) {
+					Toast.makeText(getBaseContext(),
+							"Please enter a user name and password", Toast.LENGTH_LONG).show();
 				} else {
 					DatabaseOperations DB = new DatabaseOperations(ctx);
 					DB.putInformation(DB, user_name, user_pass);

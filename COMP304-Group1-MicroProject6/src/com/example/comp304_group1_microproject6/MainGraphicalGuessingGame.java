@@ -51,7 +51,7 @@ public class MainGraphicalGuessingGame extends Activity {
 				// intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				// startActivity(intent);
 				Intent intent = new Intent(MainGraphicalGuessingGame.this,
-						LoginActivity.class);
+						FirstPageActivity.class);
 				startActivity(intent);
 			}
 		});
