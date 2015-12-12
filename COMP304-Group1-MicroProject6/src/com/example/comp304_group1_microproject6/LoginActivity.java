@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.provider.Settings.Global;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -16,7 +17,8 @@ import android.widget.Toast;
 public class LoginActivity extends Activity {
 	Button Login;
 	EditText USERNAME, USERPASS;
-	String username, userpass;
+	static String username;
+	String userpass;
 	Context CTX = this;
 
 	@Override

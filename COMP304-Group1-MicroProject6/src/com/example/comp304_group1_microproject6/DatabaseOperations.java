@@ -13,7 +13,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
 
 	public static final int database_version = 1;
 	public String CREATE_QUERY = "CREATE TABLE	" + TableInfo.TABLE_NAME + "("
-			+ TableInfo.USER_NAME + " TEXT," + TableInfo.USER_PASS + " TEXT);";
+			+ TableInfo.USER_NAME + " TEXT," + TableInfo.USER_PASS + " TEXT," + TableInfo.SCORE1 + " TEXT," + TableInfo.SCORE2 + " TEXT);";
 
 	public DatabaseOperations(Context context) {
 		super(context, TableInfo.DATABASE_NAME, null, database_version);
@@ -45,7 +45,7 @@ public class DatabaseOperations extends SQLiteOpenHelper {
 
 	public Cursor getInformayion(DatabaseOperations dop) {
 		SQLiteDatabase SQ = dop.getReadableDatabase();
-		String[] coloumns = { TableInfo.USER_NAME, TableInfo.USER_PASS };
+		String[] coloumns = { TableInfo.USER_NAME, TableInfo.USER_PASS, TableInfo.SCORE1, TableInfo.SCORE2 };
 		Cursor CR = SQ.query(TableInfo.TABLE_NAME, coloumns, null, null, null,
 				null, null);
 		return CR;
