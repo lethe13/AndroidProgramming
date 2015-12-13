@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.comp304_group1_microproject5"
+    package="com.example.comp304_group1_microproject6"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="19" />
 
     <application
@@ -13,19 +13,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.comp304_group1_microproject6.MainGraphicalGuessingGame"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.example.comp304_group1_microproject6.GraphicalGuessingGame"
-            android:label="@string/title_activity_graphical_guessing_game"
-            android:parentActivityName="com.example.comp304_group1_microproject6.MainGraphicalGuessingGame"
-            android:screenOrientation="landscape" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.comp304_group1_microproject5.MainGraphicalGuessingGame" />
-        </activity>
         <activity
             android:name="com.example.comp304_group1_microproject6.FirstPageActivity"
             android:label="@string/title_activity_first_page" >
@@ -40,8 +27,20 @@
             android:label="@string/title_activity_register" >
         </activity>
         <activity
+            android:name="com.example.comp304_group1_microproject6.MainActivity"
+            android:label="@string/title_activity_graphical_guessing_game" >
+        </activity>
+        <activity
             android:name="com.example.comp304_group1_microproject6.LoginActivity"
             android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.comp304_group1_microproject6.GraphicalGuessingGame"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.comp304_group1_microproject6.ScoreScreen"
+            android:label="@string/title_score_screen" >
         </activity>
     </application>
 

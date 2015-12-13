@@ -1,6 +1,6 @@
 package com.example.comp304_group1_microproject6;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -39,7 +39,7 @@ public class LoginActivity extends Activity {
 							"Please enter a username and password.", Toast.LENGTH_LONG).show();
 				} else {
 					DatabaseOperations DOP = new DatabaseOperations(CTX);
-					Cursor CR = DOP.getInformayion(DOP);
+					Cursor CR = DOP.getInformation(DOP);
 					CR.moveToFirst();
 					boolean login_status = false;
 					String NAME = "";
@@ -55,7 +55,7 @@ public class LoginActivity extends Activity {
 								Toast.LENGTH_LONG).show();
 						finish();
 						startActivity(new Intent(LoginActivity.this,
-								MainGraphicalGuessingGame.class));
+								MainActivity.class));
 					} else {
 						Toast.makeText(getBaseContext(), "Login Failed",
 								Toast.LENGTH_LONG).show();

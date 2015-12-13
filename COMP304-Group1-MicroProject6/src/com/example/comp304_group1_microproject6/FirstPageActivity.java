@@ -1,6 +1,6 @@
 package com.example.comp304_group1_microproject6;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.content.Intent;

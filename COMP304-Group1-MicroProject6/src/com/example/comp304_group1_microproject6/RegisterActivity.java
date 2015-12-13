@@ -1,6 +1,6 @@
 package com.example.comp304_group1_microproject6;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.content.Context;
@@ -47,12 +47,21 @@ public class RegisterActivity extends Activity {
 							"Please enter a user name and password", Toast.LENGTH_LONG).show();
 				} else {
 					DatabaseOperations DB = new DatabaseOperations(ctx);
-					DB.putInformation(DB, user_name, user_pass);
-					Toast.makeText(getBaseContext(), "Registration Success",
-							Toast.LENGTH_LONG).show();
-					finish();
-					startActivity(new Intent(RegisterActivity.this,
-							FirstPageActivity.class));
+					if (DB.duplicateAccount(DB, user_name) == false)
+					{
+						DB.putInformation(DB, user_name, user_pass);
+						Toast.makeText(getBaseContext(), "Registration Success",
+								Toast.LENGTH_LONG).show();
+						finish();
+						startActivity(new Intent(RegisterActivity.this,
+								FirstPageActivity.class));
+					}
+					else
+					{
+						Toast.makeText(getBaseContext(), "Account name taken!",
+								Toast.LENGTH_LONG).show();
+					}
+					
 				}
 			}
 

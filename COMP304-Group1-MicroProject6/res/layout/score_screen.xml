@@ -13,20 +13,10 @@
         android:text="Score Game 1:" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="29dp"
-        android:text="Score Game 2:" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textView1"
         android:layout_marginTop="24dp"
         android:text="Total Score:" />
 
@@ -41,19 +31,20 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/Score2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignRight="@+id/Score1"
-        android:text="TextView" />
-
-    <TextView
         android:id="@+id/totalScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
         android:layout_alignRight="@+id/Score1"
         android:text="TextView" />
+
+    <Button
+        android:id="@+id/score_backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="27dp"
+        android:text="Back" />
 
 </RelativeLayout>

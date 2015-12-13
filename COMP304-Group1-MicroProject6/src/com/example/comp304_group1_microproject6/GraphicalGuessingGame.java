@@ -2,13 +2,14 @@ package com.example.comp304_group1_microproject6;
 
 import java.util.Random;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -328,13 +329,35 @@ public class GraphicalGuessingGame extends Activity {
 				+ "%!");
 		builder.setCancelable(false);
 
+		//check for high score and add score to end
+		DatabaseOperations DOP = new DatabaseOperations(this);
+		Cursor CR = DOP.getInformation(DOP);
+		CR.moveToFirst();
+		while (CR.moveToNext())
+		{
+			if (CR.getString(0).equals(LoginActivity.username))
+			{
+				float Score1 = CR.getFloat(2);
+				if (score > Score1)
+				{
+					Score1 = score;
+				}
+				float Score2 = CR.getFloat(3);
+				Score2 += score;
+				
+				DOP.updateInformation(DOP, LoginActivity.username, (int)Score1, (int)Score2);
+			}
+		}
+		
+		
 		builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(GraphicalGuessingGame.this,
-						MainGraphicalGuessingGame.class);
+						MainActivity.class);
+				intent.putExtra("score", score);
 				startActivity(intent);
 
 			}
@@ -357,7 +380,7 @@ public class GraphicalGuessingGame extends Activity {
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(GraphicalGuessingGame.this,
-						MainGraphicalGuessingGame.class);
+						MainActivity.class);
 				startActivity(intent);
 
 			}
@@ -373,7 +396,7 @@ public class GraphicalGuessingGame extends Activity {
 		super.onPause();
 		mp.stop();
 		Intent intent = new Intent(GraphicalGuessingGame.this,
-				MainGraphicalGuessingGame.class);
+				MainActivity.class);
 		startActivity(intent);
 	}
 

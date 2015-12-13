@@ -8,5 +8,6 @@
     <string name="title_activity_first_page">FirstPageActivity</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_score_screen">Score Screen</string>
 
 </resources>

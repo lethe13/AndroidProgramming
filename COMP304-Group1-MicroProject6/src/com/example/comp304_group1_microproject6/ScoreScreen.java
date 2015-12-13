@@ -1,12 +1,15 @@
 package com.example.comp304_group1_microproject6;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -18,36 +21,37 @@ public class ScoreScreen extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.score_screen);
 		TextView score1 = (TextView)findViewById(R.id.Score1);
-		TextView score2 = (TextView)findViewById(R.id.Score2);
+		//TextView score2 = (TextView)findViewById(R.id.Score2);
 		TextView totalscore = (TextView)findViewById(R.id.totalScore);
+		Button back = (Button)findViewById(R.id.score_backbtn);
+		back.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(ScoreScreen.this, MainActivity.class);
+				startActivity(i);
+			}
+		});
+		
+		String Score1 = "0";
+		String Score2 = "0";
 		
 		//Connect to Database and retrive Scores
 		DatabaseOperations DOP = new DatabaseOperations(CTX);
-		Cursor CR = DOP.getInformayion(DOP);
+		Cursor CR = DOP.getInformation(DOP);
 		CR.moveToFirst();
-		String Score1 = "";
-		do {
-			if (LoginActivity.username.equals(CR.getString(0)))
+		while (CR.moveToNext())
+		{
+			if (CR.getString(0).equals(LoginActivity.username))
 			{
-				Score1 = CR.getString(3);
+				Score1 = String.valueOf(CR.getInt(2));
+				Score2 = String.valueOf(CR.getInt(3));
 			}
-		} while (CR.moveToNext());
-		String Score2 = "";
-		do {
-			if (LoginActivity.username.equals(CR.getString(0)))
-			{
-				Score2 = CR.getString(4);
-			}
-		} while (CR.moveToNext());
-		//float TotalScore = Score1+Score2;
-	
-		//Change to String and Display in the textviews
-		score1.setText(Score1);
-		score2.setText(Score2);
+		}
 		
-		float TotalScore = Float.valueOf(Score1) +  Float.valueOf(Score2);
-		String TotalScoreText = Float.toString(TotalScore);
-		totalscore.setText(TotalScoreText);
+		score1.setText(Score1);
+		totalscore.setText(Score2);
 	}
 
 }

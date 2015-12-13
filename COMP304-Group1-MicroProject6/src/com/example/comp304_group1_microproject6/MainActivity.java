@@ -1,6 +1,6 @@
 package com.example.comp304_group1_microproject6;
 
-import com.example.comp304_group1_microproject5.R;
+import com.example.comp304_group1_microproject6.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,32 +14,33 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button b1 = (Button)findViewById(R.id.button1);
-		Button b2 = (Button)findViewById(R.id.button2);
+		Button b1 = (Button)findViewById(R.id.score_backbtn);
+		b1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, GraphicalGuessingGame.class);
+				startActivity(i);
+			}
+		});
 		Button b3 = (Button)findViewById(R.id.button3);
+		b3.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this, ScoreScreen.class);
+				startActivity(i);
+			}
+		});
 		Button b4 = (Button)findViewById(R.id.button4);
+		b4.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v)
+			{
+				Intent i = new Intent(MainActivity.this, FirstPageActivity.class);
+				startActivity(i);
+			}
+		});
 		
-	}
-	
-	public void onClick(View clickedButton){
-		switch(clickedButton.getId()){
-		case R.id.button1:
-			 // Play Game 1
-			Intent i = new Intent(getApplicationContext(), GraphicalGuessingGame.class);
-			startActivity(i);
-			break;
-		case R.id.button2:
-			Intent i2 = new Intent(getApplicationContext(), MainGraphicalGuessingGame.class);
-			startActivity(i2);
-			break;
-		case R.id.button3:
-			Intent i3 = new Intent(getApplicationContext(), ScoreScreen.class);
-			startActivity(i3);
-			break;
-		case R.id.button4:
-			// logout
-			System.exit(0);
-			break;
-		}
 	}
 }
