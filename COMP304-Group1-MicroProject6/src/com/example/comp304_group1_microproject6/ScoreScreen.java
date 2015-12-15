@@ -23,8 +23,8 @@ public class ScoreScreen extends Activity {
 		TextView score1 = (TextView)findViewById(R.id.Score1);
 		//TextView score2 = (TextView)findViewById(R.id.Score2);
 		TextView totalscore = (TextView)findViewById(R.id.totalScore);
-		Button back = (Button)findViewById(R.id.score_backbtn);
-		back.setOnClickListener(new View.OnClickListener() {
+		Button backBtn = (Button)findViewById(R.id.backmenu);
+		backBtn.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {

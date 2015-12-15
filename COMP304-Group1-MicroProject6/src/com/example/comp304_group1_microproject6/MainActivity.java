@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button b1 = (Button)findViewById(R.id.score_backbtn);
+		Button b1 = (Button)findViewById(R.id.backmenu);
 		b1.setOnClickListener(new View.OnClickListener() {
 			
 			@Override

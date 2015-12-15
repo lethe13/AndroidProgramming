@@ -16,26 +16,14 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="29dp"
-        android:text="Score Game 2:" 
-        android:textColor="#ffffff"
-        android:textSize="20sp"/>
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textView1"
         android:layout_marginTop="24dp"
-        android:text="Total Score:" 
+        android:text="Total Score:"
         android:textColor="#ffffff"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/Score1"
@@ -50,16 +38,6 @@
         android:textSize="20sp"/>
 
     <TextView
-        android:id="@+id/Score2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_alignRight="@+id/Score1"
-        android:text="TextView" 
-        android:textColor="#ffffff"
-        android:textSize="20sp"/>
-
-    <TextView
         android:id="@+id/totalScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,5 +46,14 @@
         android:text="TextView" 
         android:textColor="#ffffff"
         android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/backmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="27dp"
+        android:text="Back" />
 
 </RelativeLayout>
